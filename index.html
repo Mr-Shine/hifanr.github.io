@@ -1,8 +1,31 @@
 <!DOCTYPE html>
 <html>
-<head>
-</head>
-<body>
-  hello world...
-</body>
+	<head>
+		<link rel="stylesheet" href="static/css/fullpage.min.css">
+		<script type="text/javascript" src="static/js/jquery.min.js"></script>
+		<script type="text/javascript" src="static/js/fullpage.min.js"></script>
+		<style>
+			#section1 {
+				background-image: url(static/img/1087597778948660627.jpg);
+			}
+			#section2 {
+				background-image: url(static/img/1110178270522929692.jpg);
+			}
+			#section3 {
+				background-image: url(static/img/1110178307873215717.jpg);
+			}
+		</style>
+	</head>
+	<body>
+		<div id="fullpage">
+			<div id="section1" class="fp-section"></div>
+			<div id="section2" class="fp-section"></div>
+			<div id="section3" class="fp-section"></div>
+		</div>
+		<script type="text/javascript">
+			$(function(){
+				$('#fullpage').fullpage();
+			})
+		</script>
+	</body>
 </html>
