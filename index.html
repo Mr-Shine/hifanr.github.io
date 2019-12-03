@@ -5,18 +5,93 @@
 		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.7/fullpage.min.js"></script>
 		<style>
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			ul {
+				list-style-type: none;
+			}
+			.top {
+				position: fixed;
+				left: 0;
+				right: 0;
+				top: 0;
+				z-index: 999;
+				height: 50px;
+				background-color: rgba(0, 0, 0, 0.6);
+			}
+			.menu {
+				width: 82%;
+				margin: 0 auto;
+				overflow: hidden;
+			}
+			.logo {
+				float: left;
+				margin-top: 9px;
+			}
+			.logo a {
+				display: inline-block;
+				width: 32px;
+				height: 32px;
+				background-image: url(images-14/logo_2x.png);
+				background-size: 32px 32px;
+			}
+			.nav {
+				font-size: 0;
+				float: right;
+				margin-top: 14px;
+			}
+			.nav li {
+				display: inline-block;
+				margin-left: 32px;
+			}
+			.nav a {
+				color: #fff;
+				height: 30px;
+				line-height: 30px;
+				text-decoration: none;
+				display: inline-block;
+				font: 14px/1.6 "Microsoft Yahei";
+				font-weight: 700;
+			}
+			.nav a:hover {
+				color: #83c3f3;
+			}
+			.fp-section {
+				text-align: center;
+				background-repeat: no-repeat;
+				background-position: 50% 50%;
+				background-size: cover;
+				overflow: hidden;
+			}
 			#section1 {
 				background-image: url('http://image.zuma.com/basic/1087597778948660627.jpg');
 			}
 			#section2 {
-				background-image: url('http://image.zuma.com/basic/1110178270522929692.jpg');
+				background-image: url('http://image.zuma.com/basic/1110178307873215717.jpg');
 			}
 			#section3 {
-				background-image: url('http://image.zuma.com/basic/1110178307873215717.jpg');
+				background-image: url('http://image.zuma.com/basic/1110178270522929692.jpg');
+			}
+			#fp-nav ul li a span, .fp-slidesNav ul li a span {
+				background-color: #fff;
 			}
 		</style>
 	</head>
 	<body>
+		<div class="top">
+			<div class="menu">
+				<h1 class="logo">
+					<a href="#"></a>
+				</h1>
+				<ul class="nav">
+					<li><a href="javascript:">关于</a></li>
+					<li><a href="javascript:">服务</a></li>
+					<li><a href="javascript:">联系</a></li>
+				</ul>
+			</div>
+		</div>
 		<div id="fullpage">
 			<div id="section1" class="fp-section"></div>
 			<div id="section2" class="fp-section"></div>
@@ -24,7 +99,9 @@
 		</div>
 		<script type="text/javascript">
 			$(function(){
-				$('#fullpage').fullpage();
+				$('#fullpage').fullpage({
+					navigation: true
+				});
 			})
 		</script>
 	</body>
