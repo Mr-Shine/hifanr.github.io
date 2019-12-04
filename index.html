@@ -1,82 +1,31 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.7/fullpage.min.css">
-		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.7/fullpage.min.js"></script>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+		<link href="https://s3.pstatp.com/cdn/expire-1-M/animate.css/3.7.0/animate.css" type="text/css" rel="stylesheet" />
+		<link href="https://s2.pstatp.com/cdn/expire-1-M/fullPage.js/3.0.5/fullpage.min.css" type="text/css" rel="stylesheet" />
+		<script src="https://s2.pstatp.com/cdn/expire-1-M/jquery/1.11.3/jquery.min.js" type="application/javascript"></script>
+		<script src="https://s3.pstatp.com/cdn/expire-1-M/fullPage.js/3.0.5/fullpage.min.js" type="application/javascript"></script>
 		<style>
-			* {
-				margin: 0;
-				padding: 0;
-			}
-			ul {
-				list-style-type: none;
-			}
-			.top {
-				position: fixed;
-				left: 0;
-				right: 0;
-				top: 0;
-				z-index: 999;
-				height: 50px;
-				background-color: rgba(0, 0, 0, 0.6);
-			}
-			.menu {
-				width: 82%;
-				margin: 0 auto;
-				overflow: hidden;
-			}
-			.logo {
-				float: left;
-				margin-top: 9px;
-			}
-			.logo a {
-				display: inline-block;
-				width: 32px;
-				height: 32px;
-				background-image: url(images-14/logo_2x.png);
-				background-size: 32px 32px;
-			}
-			.nav {
-				font-size: 0;
-				float: right;
-				margin-top: 14px;
-			}
-			.nav li {
-				display: inline-block;
-				margin-left: 32px;
-			}
-			.nav a {
-				color: #fff;
-				height: 30px;
-				line-height: 30px;
-				text-decoration: none;
-				display: inline-block;
-				font: 14px/1.6 "Microsoft Yahei";
-				font-weight: 700;
-			}
-			.nav a:hover {
-				color: #83c3f3;
-			}
-			.fp-section {
-				text-align: center;
-				background-repeat: no-repeat;
-				background-position: 50% 50%;
-				background-size: cover;
-				overflow: hidden;
-			}
-			#section1 {
-				background-image: url('http://image.zuma.com/basic/1087597778948660627.jpg');
-			}
-			#section2 {
-				background-image: url('http://image.zuma.com/basic/1110178307873215717.jpg');
-			}
-			#section3 {
-				background-image: url('http://image.zuma.com/basic/1110178270522929692.jpg');
-			}
-			#fp-nav ul li a span, .fp-slidesNav ul li a span {
-				background-color: #fff;
-			}
+			* { margin: 0; padding: 0; }
+			.top { position: fixed; left: 0; right: 0; top: 0; z-index: 999; height: 50px; background-color: rgba(0, 0, 0, 0.6); }
+			.menu { width: 82%; margin: 0 auto; overflow: hidden; }
+			.logo { float: left; margin-top: 9px; }
+			.logo a { display: inline-block; width: 32px; height: 32px; background-image: url(images-14/logo_2x.png); background-size: 32px 32px; }
+			.nav { font-size: 0; float: right; margin-top: 14px; }
+			.nav li { display: inline-block; margin-left: 32px; }
+			.nav a { color: #fff; height: 30px; line-height: 30px; text-decoration: none; display: inline-block; font: 14px/1.6 "Microsoft Yahei"; font-weight: 700; }
+			.nav a:hover { color: #83c3f3; }
+			.fp-section { text-align: center; background-repeat: no-repeat; background-position: 50% 50%; background-size: cover; overflow: hidden; }
+			.fp-section h4 { color: #fff; font-size: 23px; font-weight: 500; letter-spacing: 4px; }
+			#fp-nav ul li a span, .fp-slidesNav ul li a span { background-color: #fff; }
+			#section1 { background-image: url('http://image.zuma.com/basic/1087597778948660627.jpg'); }
+			#section2 { background-image: url('http://image.zuma.com/basic/1110178307873215717.jpg'); }
+			#section3 { background-image: url('http://image.zuma.com/basic/1110178270522929692.jpg'); }
+			.hidden { display: none; }
+			.item { width: 20%; color: #fff; display: inline-block; }
+			.item ul { margin-top: 14px; margin-left: 27%; list-style-type: square; }
+			.item ul li { font-size: 13px; text-align: left; line-height: 24px; letter-spacing: 1px; }
 		</style>
 	</head>
 	<body>
@@ -86,21 +35,66 @@
 					<a href="#"></a>
 				</h1>
 				<ul class="nav">
-					<li><a href="javascript:">关于</a></li>
-					<li><a href="javascript:">服务</a></li>
-					<li><a href="javascript:">联系</a></li>
+					<li><a href="#">首页</a></li>
+					<li><a href="#">服务</a></li>
+					<li><a href="#">关于</a></li>
 				</ul>
 			</div>
 		</div>
 		<div id="fullpage">
 			<div id="section1" class="fp-section"></div>
-			<div id="section2" class="fp-section"></div>
+			<div id="section2" class="fp-section">
+				<div class="service">
+					<div class="item">
+						<h4>品牌网站建设</h4>
+						<ul>
+							<li>品牌官网建设</li>
+							<li>企业网站建设</li>
+							<li>网站定制开发</li>
+						</ul>
+					</div>
+					<div class="item">
+						<h4>移动应用开发</h4>
+						<ul>
+							<li>Android（安卓）开发</li>
+							<li>IOS（苹果）开发</li>
+							<li>混合应用开发</li>
+						</ul>
+					</div>
+					<div class="item">
+						<h4>微信平台开发</h4>
+						<ul>
+							<li>小程序开发</li>
+							<li>公众号开发</li>
+							<li>微商城开发</li>
+						</ul>
+					</div>
+					<div class="item">
+						<h4>业务系统研发</h4>
+						<ul>
+							<li>OA系统</li>
+							<li>CRM系统</li>
+							<li>ERP系统</li>
+						</ul>
+					</div>
+				</div>
+			</div>
 			<div id="section3" class="fp-section"></div>
 		</div>
 		<script type="text/javascript">
-			$(function(){
+			$(function() {
 				$('#fullpage').fullpage({
-					navigation: true
+					navigation: true,
+					afterLoad: function (anchorLink, index) {
+						$('.fp-section .service').removeClass("hidden")
+						$('.fp-section h4').addClass("animated fadeInLeft")
+						$('.fp-section ul').addClass("animated fadeInRight")
+					},
+					onLeave: function (index, direction) {
+						$('.fp-section .service').addClass("hidden")
+						$('.fp-section h4').removeClass("animated fadeInLeft")
+						$('.fp-section ul').removeClass("animated fadeInRight")
+					}
 				});
 			})
 		</script>
