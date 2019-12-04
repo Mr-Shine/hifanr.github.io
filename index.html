@@ -17,15 +17,28 @@
 			.nav a { color: #fff; height: 30px; line-height: 30px; text-decoration: none; display: inline-block; font: 14px/1.6 "Microsoft Yahei"; font-weight: 700; }
 			.nav a:hover { color: #83c3f3; }
 			.fp-section { text-align: center; background-repeat: no-repeat; background-position: 50% 50%; background-size: cover; overflow: hidden; }
-			.fp-section h4 { color: #fff; font-size: 23px; font-weight: 500; letter-spacing: 4px; }
+			
 			#fp-nav ul li a span, .fp-slidesNav ul li a span { background-color: #fff; }
+			
+			
 			#section1 { background-image: url('http://image.zuma.com/basic/1087597778948660627.jpg'); }
+			
+			
 			#section2 { background-image: url('http://image.zuma.com/basic/1110178307873215717.jpg'); }
-			#section3 { background-image: url('http://image.zuma.com/basic/1110178270522929692.jpg'); }
+			#section2 .item { width: 20%; color: #fff; display: inline-block; }
+			#section2 .item h4 { color: #fff; font-size: 23px; font-weight: 500; letter-spacing: 4px; }
+			#section2 .item ul { margin-top: 14px; margin-left: 27%; list-style-type: square; }
+			#section2 .item ul li { font-size: 13px; text-align: left; line-height: 24px; letter-spacing: 1px; }
+			
+			#section3 { background-image: url('http://image.zuma.com/image/1121033044141648520.jpg'); }
+			#section3 .div31 { width: 100%; height: 100%; position: absolute; top: 0px; background-image: url(''); border: 0px solid rgb(0, 0, 0); background-color: rgba(6, 32, 47, 0.45); }
+			#section3 .div32 { position: absolute; width: 300px; height: 79px; left: 492.5px; top: 191px; transform: rotate(0deg); }
+			#section3 .div33 { position: absolute; width: 1027px; height: 72px; left: 129px; top: 289px; transform: rotate(0deg); }
+			#section3 .span31 { background-color: rgba(0, 0, 0, 0); box-sizing: border-box; font-size: 60px; color: rgb(255, 255, 255); text-indent: 0.01px; font-weight: 700; }
+			#section3 .span32 { font-size: 60px; color: rgb(0, 178, 255); text-indent: 0.01px; box-sizing: border-box; font-weight: 700; background-color: rgba(0, 0, 0, 0); }
+			#section3 .span33 { font-size: 20px; text-indent: 0.01px; color: rgb(255, 255, 255); box-sizing: border-box; letter-spacing: 0px; line-height: 1.8em; font-family: 方正姚体; background-color: rgba(0, 0, 0, 0); }
+			
 			.hidden { display: none; }
-			.item { width: 20%; color: #fff; display: inline-block; }
-			.item ul { margin-top: 14px; margin-left: 27%; list-style-type: square; }
-			.item ul li { font-size: 13px; text-align: left; line-height: 24px; letter-spacing: 1px; }
 		</style>
 	</head>
 	<body>
@@ -42,7 +55,9 @@
 			</div>
 		</div>
 		<div id="fullpage">
-			<div id="section1" class="fp-section"></div>
+			<div id="section1" class="fp-section">
+				
+			</div>
 			<div id="section2" class="fp-section">
 				<div class="service">
 					<div class="item">
@@ -79,7 +94,21 @@
 					</div>
 				</div>
 			</div>
-			<div id="section3" class="fp-section"></div>
+			<div id="section3" class="fp-section">
+				<div class="about">
+					<div class="div31"></div>
+					<div class="div32">
+						<div class="div321">
+							<span class="span31">专业&nbsp; &nbsp;</span><span class="span32">高效</span>
+						</div>
+					</div>
+					<div class="div33">
+						<div class="div321">
+							<span class="span33">我们拥有专业的人员、高效的团队，时刻保持着认真、严谨的心态为每一位客户提供优质的服务，我们期待与您一起构建更加完美科学的信息化管理系统。</span>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 		<script type="text/javascript">
 			$(function() {
@@ -89,11 +118,19 @@
 						$('.fp-section .service').removeClass("hidden")
 						$('.fp-section h4').addClass("animated fadeInLeft")
 						$('.fp-section ul').addClass("animated fadeInRight")
+						
+						$('.fp-section .about').removeClass("hidden")
+						$('.fp-section .div32').addClass("animated rubberBand")
+						$('.fp-section .div33').addClass("animated bounceInUp")
 					},
 					onLeave: function (index, direction) {
 						$('.fp-section .service').addClass("hidden")
 						$('.fp-section h4').removeClass("animated fadeInLeft")
 						$('.fp-section ul').removeClass("animated fadeInRight")
+						
+						$('.fp-section .about').addClass("hidden")
+						$('.fp-section .div32').removeClass("animated rubberBand")
+						$('.fp-section .div33').removeClass("animated bounceInUp")
 					}
 				});
 			})
