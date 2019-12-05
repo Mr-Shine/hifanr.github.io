@@ -18,11 +18,13 @@
 			.nav a:hover { color: #83c3f3; }
 			.fp-section { text-align: center; background-repeat: no-repeat; background-position: 50% 50%; background-size: cover; overflow: hidden; }
 			
-			#fp-nav ul li a span, .fp-slidesNav ul li a span { background-color: #fff; }
-			
+			.hidden { display: none; }
 			
 			#section1 { background-image: url('https://image.zuma.com/basic/1087597778948660627.jpg'); }
-			
+			#section1 .home span { font-family: YouYuan; font-size: 3.8vw; color: rgb(255, 255, 255); margin-right: 2.5%; }
+			#section1 .home span font { color: rgb(0, 178, 255); }
+			#section1 .home .tech { width: 50%; text-align: right; }
+			#section1 .home .prof { width: 50%; text-align: left; margin-left: 50%; }
 			
 			#section2 { background-image: url('https://image.zuma.com/basic/1110178307873215717.jpg'); }
 			#section2 .item { width: 20%; color: #fff; display: inline-block; }
@@ -38,7 +40,7 @@
 			#section3 .span32 { font-size: 4.5vw; color: rgb(0, 178, 255); text-indent: 0.01px; box-sizing: border-box; font-weight: 700; background-color: rgba(0, 0, 0, 0); }
 			#section3 .span33 { font-size: 1.45vw; text-indent: 0.01px; color: rgb(255, 255, 255); box-sizing: border-box; letter-spacing: 0px; line-height: 1.8em; font-family: 方正姚体; background-color: rgba(0, 0, 0, 0); }
 			
-			.hidden { display: none; }
+			#fp-nav ul li a span, .fp-slidesNav ul li a span { background-color: #fff; }
 		</style>
 	</head>
 	<body>
@@ -48,15 +50,22 @@
 					<a href="#"></a>
 				</h1>
 				<ul class="nav">
-					<li><a href="#">首页</a></li>
-					<li><a href="#">服务</a></li>
-					<li><a href="#">关于</a></li>
+<!-- 					<li class="sy"><a href="#">首页</a></li>
+					<li class="fw"><a href="#">服务</a></li>
+					<li class="gy"><a href="#">关于</a></li> -->
 				</ul>
 			</div>
 		</div>
 		<div id="fullpage">
 			<div id="section1" class="fp-section">
-				
+				<div class="home">
+					<div class="tech">
+						<span><font>科技</font>引领未来</span>
+					</div>
+					<div class="prof">
+						<span><font>专业</font>值得信赖</span>
+					</div>
+				</div>
 			</div>
 			<div id="section2" class="fp-section">
 				<div class="service">
@@ -111,6 +120,10 @@
 				$('#fullpage').fullpage({
 					navigation: true,
 					afterLoad: function (anchorLink, index) {
+						$('.fp-section .home').removeClass("hidden")
+						$('.fp-section .tech').addClass("animated fadeInLeft")
+						$('.fp-section .prof').addClass("animated fadeInRight")
+						
 						$('.fp-section .service').removeClass("hidden")
 						$('.fp-section h4').addClass("animated fadeInLeft")
 						$('.fp-section ul').addClass("animated fadeInRight")
@@ -120,6 +133,10 @@
 						$('.fp-section .div33').addClass("animated bounceInUp")
 					},
 					onLeave: function (index, direction) {
+						$('.fp-section .home').addClass("hidden")
+						$('.fp-section .tech').removeClass("animated fadeInLeft")
+						$('.fp-section .prof').removeClass("animated fadeInRight")
+						
 						$('.fp-section .service').addClass("hidden")
 						$('.fp-section h4').removeClass("animated fadeInLeft")
 						$('.fp-section ul').removeClass("animated fadeInRight")
