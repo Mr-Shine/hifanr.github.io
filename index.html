@@ -3,9 +3,9 @@
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
 		<link href="https://s3.pstatp.com/cdn/expire-1-M/animate.css/3.7.0/animate.css" type="text/css" rel="stylesheet" />
-		<link href="https://s2.pstatp.com/cdn/expire-1-M/fullPage.js/3.0.5/fullpage.min.css" type="text/css" rel="stylesheet" />
+		<link href="https://s1.pstatp.com/cdn/expire-1-M/fullPage.js/2.9.7/jquery.fullpage.min.css" type="text/css" rel="stylesheet" />
 		<script src="https://s2.pstatp.com/cdn/expire-1-M/jquery/1.11.3/jquery.min.js" type="application/javascript"></script>
-		<script src="https://s3.pstatp.com/cdn/expire-1-M/fullPage.js/3.0.5/fullpage.min.js" type="application/javascript"></script>
+		<script src="https://s0.pstatp.com/cdn/expire-1-M/fullPage.js/2.9.7/jquery.fullpage.min.js" type="application/javascript"></script>
 		<style>
 			* { margin: 0; padding: 0; }
 			.top { position: fixed; left: 0; right: 0; top: 0; z-index: 999; height: 50px; background-color: rgba(0, 0, 0, 0.6); }
@@ -16,7 +16,7 @@
 			.nav li { display: inline-block; margin-left: 32px; }
 			.nav a { color: #fff; height: 30px; line-height: 30px; text-decoration: none; display: inline-block; font: 14px/1.6 "Microsoft Yahei"; font-weight: 700; }
 			.nav a:hover { color: #83c3f3; }
-			.fp-section { text-align: center; background-repeat: no-repeat; background-position: 50% 50%; background-size: cover; overflow: hidden; }
+			.section { text-align: center; background-repeat: no-repeat; background-position: 50% 50%; background-size: cover; overflow: hidden; }
 			
 			.hidden { display: none; }
 			
@@ -26,16 +26,23 @@
 			#section1 .home .tech { width: 50%; text-align: right; }
 			#section1 .home .prof { width: 50%; text-align: left; margin-left: 50%; }
 			
-			#section2 { background-image: url('https://image.zuma.com/basic/1110178307873215717.jpg'); }
-			#section2 .item { width: 20%; color: #fff; display: inline-block; }
-			#section2 .item h4 { font-size: 1.68vw; font-weight: 500; letter-spacing: 4px; color: #fff; }
+			#section2 { background-image: url('https://19915405.s61i.faiusr.com/4/AD0IjcW-CRAEGAAgvtDx6AUopNnojwQwgA84wAc.png'); }
+			#section2 .service { height: 50%; }
+			#section2 .service .title { height: 20%; color: #fff; font-size: 1.7vw; letter-spacing: 0.2vw; margin-bottom: 1%; }
+			#section2 .item { width: 20%; height: 100%; color: #fff; display: inline-block; }
+			#section2 .item h4 { margin-top: 3vh; font-size: 1.68vw; font-weight: 500; letter-spacing: 4px; color: #fff; }
 			#section2 .item ul { margin-top: 14px; margin-left: 27%; list-style-type: square; }
 			#section2 .item ul li { font-size: 0.98vw; text-align: left; line-height: 24px; letter-spacing: 0.05vw; }
+			#section2 .item1 { background: url('https://19866062.s61i.faiusr.com/4/AD0IzsO8CRAEGAAgocXM6AUo8tnYHTD2ATi3Ag.png') no-repeat center; }
+			#section2 .item2 { background: url('https://19866062.s61i.faiusr.com/4/AD0IzsO8CRAEGAAgnsXM6AUov6u8lQcw9gE4twI.png') no-repeat center; }
+			#section2 .item3 { background: url('https://19866062.s61i.faiusr.com/4/AD0IzsO8CRAEGAAgocXM6AUo-8HpaDD2ATi3Ag.png') no-repeat center; }
+			#section2 .item4 { background: url('https://19866062.s61i.faiusr.com/4/AD0IzsO8CRAEGAAgocXM6AUo66un8QQw9gE4twI.png') no-repeat center; }
+			#section2 .item img { margin-top: 10vh; }
 			
-			#section3 { background-image: url('https://image.zuma.com/image/1121033044141648520.jpg'); }
-			#section3 .div31 { width: 100%; height: 100%; position: absolute; top: 0px; background-image: url(''); border: 0px solid rgb(0, 0, 0); background-color: rgba(6, 32, 47, 0.45); }
-			#section3 .div32 { margin-top: 2%; transform: rotate(0deg); }
-			#section3 .div33 { width: 78%; margin-top: 1%; margin-left: 11%; transform: rotate(0deg); }
+			#section3 { background-image: url('https://12186827.s61i.faiusr.com/2/AD0Iy_nnBRACGAAgsuqxywUo68jYpQYwgA848AU.jpg'); }
+			#section3 .about { width: 100%; height: 100%; position: absolute; top: 0px; overflow: hidden; }
+			#section3 .div31 { margin-top: 18.8%; transform: rotate(0deg); }
+			#section3 .div32 { width: 78%; margin-top: 1%; margin-left: 11%; transform: rotate(0deg); }
 			#section3 .span31 { font-size: 4.5vw; color: rgb(255, 255, 255); text-indent: 0.01px; box-sizing: border-box; font-weight: 700; background-color: rgba(0, 0, 0, 0); }
 			#section3 .span32 { font-size: 4.5vw; color: rgb(0, 178, 255); text-indent: 0.01px; box-sizing: border-box; font-weight: 700; background-color: rgba(0, 0, 0, 0); }
 			#section3 .span33 { font-size: 1.45vw; text-indent: 0.01px; color: rgb(255, 255, 255); box-sizing: border-box; letter-spacing: 0px; line-height: 1.8em; font-family: 方正姚体; background-color: rgba(0, 0, 0, 0); }
@@ -57,7 +64,7 @@
 			</div>
 		</div>
 		<div id="fullpage">
-			<div id="section1" class="fp-section">
+			<div id="section1" class="section">
 				<div class="home">
 					<div class="tech">
 						<span><font>科技</font>引领未来</span>
@@ -67,9 +74,13 @@
 					</div>
 				</div>
 			</div>
-			<div id="section2" class="fp-section">
+			<div id="section2" class="section">
 				<div class="service">
-					<div class="item">
+					<div class="title animated fadeInDown">
+						我们的服务
+					</div>
+					<div class="item item1 animated fadeInDown">
+						<img src="https://19866062.s61i.faiusr.com/4/AD0IzsO8CRAEGAAgnsXM6AUojquXpQYwKThG.png" />
 						<h4>品牌网站建设</h4>
 						<ul>
 							<li>品牌官网建设</li>
@@ -77,7 +88,8 @@
 							<li>网站定制开发</li>
 						</ul>
 					</div>
-					<div class="item">
+					<div class="item item2 animated fadeInUp">
+						<img src="https://19866062.s61i.faiusr.com/4/AD0IzsO8CRAEGAAgnsXM6AUo9pfK6QcwMjhG.png" />
 						<h4>移动应用开发</h4>
 						<ul>
 							<li>Android（安卓）开发</li>
@@ -85,7 +97,8 @@
 							<li>混合应用开发</li>
 						</ul>
 					</div>
-					<div class="item">
+					<div class="item item3 animated fadeInDown">
+						<img src="https://19866062.s61i.faiusr.com/4/AD0IzsO8CRAEGAAgnsXM6AUo9OzCtAEwMzhG.png" />
 						<h4>微信平台开发</h4>
 						<ul>
 							<li>小程序开发</li>
@@ -93,7 +106,8 @@
 							<li>微商城开发</li>
 						</ul>
 					</div>
-					<div class="item">
+					<div class="item item4 animated fadeInUp">
+						<img src="https://19866062.s61i.faiusr.com/4/AD0IzsO8CRAEGAAgnsXM6AUosLLPhAUwNThG.png" />
 						<h4>业务系统研发</h4>
 						<ul>
 							<li>OA系统</li>
@@ -103,13 +117,12 @@
 					</div>
 				</div>
 			</div>
-			<div id="section3" class="fp-section">
+			<div id="section3" class="section">
 				<div class="about">
-					<div class="div31"></div>
-					<div class="div32">
+					<div class="div31">
 						<span class="span31">专业&nbsp; &nbsp;</span><span class="span32">高效</span>
 					</div>
-					<div class="div33">
+					<div class="div32">
 						<span class="span33">我们拥有专业的人员、高效的团队，时刻保持着认真、严谨的心态为每一位客户提供优质的服务，我们期待与您一起构建更加完美科学的信息化管理系统。</span>
 					</div>
 				</div>
@@ -120,30 +133,26 @@
 				$('#fullpage').fullpage({
 					navigation: true,
 					afterLoad: function (anchorLink, index) {
-						$('.fp-section .home').removeClass("hidden")
-						$('.fp-section .tech').addClass("animated fadeInLeft")
-						$('.fp-section .prof').addClass("animated fadeInRight")
+						$('.section .home').removeClass("hidden")
+						$('.section .tech').addClass("animated fadeInLeft")
+						$('.section .prof').addClass("animated fadeInRight")
 						
-						$('.fp-section .service').removeClass("hidden")
-						$('.fp-section h4').addClass("animated fadeInLeft")
-						$('.fp-section ul').addClass("animated fadeInRight")
+						$('.section .service').removeClass("hidden")
 						
-						$('.fp-section .about').removeClass("hidden")
-						$('.fp-section .div32').addClass("animated rubberBand")
-						$('.fp-section .div33').addClass("animated bounceInUp")
+						$('.section .about').removeClass("hidden")
+						$('.section .div31').addClass("animated rubberBand")
+						$('.section .div32').addClass("animated bounceInUp")
 					},
 					onLeave: function (index, direction) {
-						$('.fp-section .home').addClass("hidden")
-						$('.fp-section .tech').removeClass("animated fadeInLeft")
-						$('.fp-section .prof').removeClass("animated fadeInRight")
+						$('.section .home').addClass("hidden")
+						$('.section .tech').removeClass("animated fadeInLeft")
+						$('.section .prof').removeClass("animated fadeInRight")
 						
-						$('.fp-section .service').addClass("hidden")
-						$('.fp-section h4').removeClass("animated fadeInLeft")
-						$('.fp-section ul').removeClass("animated fadeInRight")
+						$('.section .service').addClass("hidden")
 						
-						$('.fp-section .about').addClass("hidden")
-						$('.fp-section .div32').removeClass("animated rubberBand")
-						$('.fp-section .div33').removeClass("animated bounceInUp")
+						$('.section .about').addClass("hidden")
+						$('.section .div31').removeClass("animated rubberBand")
+						$('.section .div32').removeClass("animated bounceInUp")
 					}
 				});
 			})
