@@ -40,12 +40,17 @@
 			#section2 .item img { margin-top: 10vh; }
 			
 			#section3 { background-image: url('https://12186827.s61i.faiusr.com/2/AD0Iy_nnBRACGAAgsuqxywUo68jYpQYwgA848AU.jpg'); }
-			#section3 .about { width: 100%; height: 100%; position: absolute; top: 0px; overflow: hidden; }
-			#section3 .div31 { margin-top: 18.8%; transform: rotate(0deg); }
-			#section3 .div32 { width: 78%; margin-top: 1%; margin-left: 11%; transform: rotate(0deg); }
-			#section3 .span31 { font-size: 4.5vw; color: rgb(255, 255, 255); text-indent: 0.01px; box-sizing: border-box; font-weight: 700; background-color: rgba(0, 0, 0, 0); }
-			#section3 .span32 { font-size: 4.5vw; color: rgb(0, 178, 255); text-indent: 0.01px; box-sizing: border-box; font-weight: 700; background-color: rgba(0, 0, 0, 0); }
-			#section3 .span33 { font-size: 1.45vw; text-indent: 0.01px; color: rgb(255, 255, 255); box-sizing: border-box; letter-spacing: 0px; line-height: 1.8em; font-family: 方正姚体; background-color: rgba(0, 0, 0, 0); }
+			#section3 .about { width: 100%; height: 100%; position: absolute; top: 0px; overflow: hidden; text-align: center; display: table; }
+			#section3 .div31 { width: 25%; height: 100%; padding-left: 12%; display: table-cell; vertical-align: middle; }
+			#section3 .div32 { width: 30%; height: 100%; display: table-cell; vertical-align: middle; }
+			#section3 .div32 img { width: 58%; padding-top: 5%; }
+			#section3 .span31 { font-size: 4.5vw; color: rgb(0, 0, 0); text-indent: 0.01px; box-sizing: border-box; font-weight: 700; background-color: rgba(0, 0, 0, 0); }
+			#section3 .span32 { font-size: 4.5vw; color: rgb(255, 255, 255); text-indent: 0.01px; box-sizing: border-box; font-weight: 700; background-color: rgba(0, 0, 0, 0); }
+			#section3 .span33 { font-size: 1.25vw; text-indent: 0.01px; color: rgb(255, 255, 255); box-sizing: border-box; letter-spacing: 0px; line-height: 1.8em; font-family: 方正姚体; background-color: rgba(0, 0, 0, 0); }
+			
+			#section3 .footer { display: table; clear: both; table-layout: fixed; position: absolute; bottom: 0; width: 100%; background: #252c36; }
+			#section3 .footer .footerContent { padding: 20px 0 20px; }
+			#section3 .footer .footerContent .footerInfo { font-size: 12px; font-family: 微软雅黑; color: #afaeae; }
 			
 			#fp-nav ul li a span, .fp-slidesNav ul li a span { background-color: #fff; }
 		</style>
@@ -111,8 +116,8 @@
 						<h4>业务系统研发</h4>
 						<ul>
 							<li>OA系统</li>
-							<li>CRM系统</li>
 							<li>ERP系统</li>
+							<li>CRM系统···</li>
 						</ul>
 					</div>
 				</div>
@@ -120,10 +125,19 @@
 			<div id="section3" class="section">
 				<div class="about">
 					<div class="div31">
-						<span class="span31">专业&nbsp; &nbsp;</span><span class="span32">高效</span>
+						<span class="span31">专业</span>
+						<span style="font-size: 4vw; color: cornsilk">&nbsp;&&nbsp;</span>
+						<span class="span32">高效</span>
+						<br />
+						<span class="span33">我们拥有专业的人员、高效的团队，时刻保持着认真、严谨的心态为每一位客户提供优质的服务，我们期待与您一起构建更加完美科学的IT系统、用技术创新的力量实现共赢。</span>
 					</div>
 					<div class="div32">
-						<span class="span33">我们拥有专业的人员、高效的团队，时刻保持着认真、严谨的心态为每一位客户提供优质的服务，我们期待与您一起构建更加完美科学的信息化管理系统。</span>
+						<img src="//12214915.s61i.faiusr.com/4/AD0Ig8XpBRAEGAAgxeKkwgUoouyboAEwnwM46wI.png.webp" />
+					</div>
+				</div>
+				<div class="footer">
+					<div class="footerContent">
+						<div class="footerInfo">©2020 Hifanr 版权所有</div>
 					</div>
 				</div>
 			</div>
@@ -140,8 +154,8 @@
 						$('.section .service').removeClass("hidden")
 						
 						$('.section .about').removeClass("hidden")
-						$('.section .div31').addClass("animated rubberBand")
-						$('.section .div32').addClass("animated bounceInUp")
+						$('.section .div31').addClass("animated fadeInLeft")
+						$('.section .div32').addClass("animated fadeInRight")
 					},
 					onLeave: function (index, direction) {
 						$('.section .home').addClass("hidden")
@@ -151,8 +165,8 @@
 						$('.section .service').addClass("hidden")
 						
 						$('.section .about').addClass("hidden")
-						$('.section .div31').removeClass("animated rubberBand")
-						$('.section .div32').removeClass("animated bounceInUp")
+						$('.section .div31').removeClass("animated fadeInLeft")
+						$('.section .div32').removeClass("animated fadeInRight")
 					}
 				});
 			})
