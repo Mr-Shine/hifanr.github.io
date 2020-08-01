@@ -18,7 +18,7 @@
 			.nav a:hover { color: #83c3f3; }
 			.section { text-align: center; background-repeat: no-repeat; background-position: 50% 50%; background-size: cover; overflow: hidden; }
 			
-			.hidden { display: none; }
+			.hidden { display: none !important; }
 			
 			#section1 { background-image: url('https://image.zuma.com/basic/1087597778948660627.jpg'); }
 			#section1 .home span { font-family: YouYuan; font-size: 3.8vw; color: rgb(255, 255, 255); margin-right: 2.5%; }
@@ -48,7 +48,7 @@
 			#section3 .span32 { font-size: 4.5vw; color: rgb(255, 255, 255); text-indent: 0.01px; box-sizing: border-box; font-weight: 700; background-color: rgba(0, 0, 0, 0); }
 			#section3 .span33 { font-size: 1.25vw; text-indent: 0.01px; color: rgb(255, 255, 255); box-sizing: border-box; letter-spacing: 0px; line-height: 1.8em; font-family: 方正姚体; background-color: rgba(0, 0, 0, 0); }
 			
-			#section3 .footer { display: table; clear: both; table-layout: fixed; position: absolute; bottom: 0; width: 100%; background: #252c36; }
+			#section3 .footer { clear: both; table-layout: fixed; position: absolute; bottom: 0; width: 100%; background: #252c36; }
 			#section3 .footer .footerContent { padding: 20px 0 20px; }
 			#section3 .footer .footerContent .footerInfo { font-size: 12px; font-family: 微软雅黑; color: #afaeae; }
 			
@@ -132,7 +132,7 @@
 						<span class="span33">我们拥有专业的人员、高效的团队，时刻保持着认真、严谨的心态为每一位客户提供优质的服务，我们期待与您一起构建更加完美科学的IT系统、用技术创新的力量实现共赢。</span>
 					</div>
 					<div class="div32">
-						<img src="//12214915.s61i.faiusr.com/4/AD0Ig8XpBRAEGAAgxeKkwgUoouyboAEwnwM46wI.png.webp" />
+						<img src="https://12214915.s61i.faiusr.com/4/AD0Ig8XpBRAEGAAgxeKkwgUoouyboAEwnwM46wI.png" />
 					</div>
 				</div>
 				<div class="footer">
@@ -154,6 +154,8 @@
 						$('.section .service').removeClass("hidden")
 						
 						$('.section .about').removeClass("hidden")
+						$('.section .footer').removeClass("hidden")
+						$('.section .footer').addClass("animated fadeInUp")
 						$('.section .div31').addClass("animated fadeInLeft")
 						$('.section .div32').addClass("animated fadeInRight")
 					},
@@ -165,6 +167,8 @@
 						$('.section .service').addClass("hidden")
 						
 						$('.section .about').addClass("hidden")
+						$('.section .footer').addClass("hidden")
+						$('.section .footer').removeClass("animated fadeInUp")
 						$('.section .div31').removeClass("animated fadeInLeft")
 						$('.section .div32').removeClass("animated fadeInRight")
 					}
